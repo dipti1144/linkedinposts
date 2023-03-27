@@ -1,5 +1,6 @@
 const express=require("express");
 const connection=require("./config/db");
+const PostRouter = require("./routes/postRoute");
 const userRouter = require("./routes/userRoute");
 const app=express();
 require("dotenv").config();
@@ -11,6 +12,7 @@ app.get("/",(req,res)=>{
 })
 
 app.use("/user",userRouter)
+app.use("/post",PostRouter)
 
 connection()
 app.listen(port,()=>{
