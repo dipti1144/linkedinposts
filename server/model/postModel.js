@@ -7,6 +7,6 @@ const postSchema = mongoose.Schema({
     no_of_comments : Number
 });
 
-const Post=mongoose.model("user",postSchema);
+const Post=mongoose.model("post",postSchema);
 
 module.exports=Post;

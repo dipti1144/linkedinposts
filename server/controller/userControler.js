@@ -1,7 +1,7 @@
 const { hashpassword, comparePassword } = require("../helper/authHelper");
 const User = require("../model/userModel");
 const JWT = require("jsonwebtoken");
-const { use } = require("../routes/userRoute");
+
 
 const signupUser = async (req, res) => {
   try {

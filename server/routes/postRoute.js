@@ -5,9 +5,9 @@ const { PostingPost, getPost, updatePost, deletePost } = require("../controller/
 const PostRouter=express.Router();
 
 PostRouter.post("/",PostingPost)
-PostRouter.post("/",getPost)
-PostRouter.post("/",updatePost)
-PostRouter.post("/",deletePost)
+PostRouter.get("/",getPost)
+PostRouter.patch("/:id",updatePost)
+PostRouter.delete("/:id",deletePost)
 
 
 module.exports=PostRouter;
